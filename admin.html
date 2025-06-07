@@ -2,37 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Admin Panel</title>
-    <link rel="stylesheet" href="styles.css"> <!-- We can reuse some styles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AgriLink | Admin Panel</title>
+    
+    <!-- Links needed for the header/footer styles (Copied from index.html) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to the MAIN stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Additional styles specifically for the admin page content -->
     <style>
-        /* Additional styles for the admin page */
-        .admin-container { max-width: 800px; margin: 40px auto; padding: 40px; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .admin-container { 
+            max-width: 800px; 
+            margin: 40px auto; 
+            padding: 40px; 
+            background: #fff; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            min-height: 60vh; /* Ensures content area doesn't look too small */
+        }
         .admin-form-group { margin-bottom: 20px; }
         .admin-form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
-        .admin-form-group input, .admin-form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        .admin-form-group input, .admin-form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
         .admin-warning { background-color: #fffbe6; border: 1px solid #ffe58f; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .admin-container .section-title { font-size: 2rem; margin-bottom: 20px; }
     </style>
 </head>
 <body>
+
+    <!-- =======================
+    HEADER (Copied from index.html)
+    ======================== -->
+    <header class="main-header">
+        <div class="header-top-bar">
+            <div class="container">
+                <span>Welcome to the AgriLink Platform!</span>
+                <div class="top-bar-right">
+                    <a href="#contact">Contact Us</a>
+                    <select class="language-selector">
+                        <option value="en">English</option>
+                        <option value="rw">Kinyarwanda</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">🌿 AgriLink</a> <!-- Link back to home -->
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#dashboard">Dashboard</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="login.html" class="btn btn-primary">Login / Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- =======================
+    MAIN ADMIN CONTENT
+    ======================== -->
     <div class="admin-container">
-        <h1 class="section-title">AgriLink Admin Panel</h1>
+        <h1 class="section-title">Admin Panel</h1>
 
         <div class="admin-warning">
             <strong>Note:</strong> This is a visual template. The "Upload" and "Save" buttons require backend development to function.
         </div>
 
-        <form>
+        <form action="#" method="POST"> <!-- Added action and method for proper form structure -->
+            <h3>Manage Homepage Slider</h3>
             <div class="admin-form-group">
-                <h3>Manage Homepage Slider</h3>
                 <label for="slider-image">Upload New Slider Image</label>
-                <input type="file" id="slider-image" name="slider-image">
+                <input type="file" id="slider-image" name="slider-image" accept="image/*">
             </div>
             <button type="submit" class="btn btn-primary">Upload Image</button>
         </form>
 
-        <hr style="margin: 40px 0;">
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
 
-        <form>
+        <form action="#" method="POST">
             <h3>Update Dashboard Data</h3>
             <div class="admin-form-group">
                 <label for="farmer-count">Farmer Count (e.g., "1,250+ Farmers")</label>
@@ -46,5 +104,19 @@
             <button type="submit" class="btn btn-primary">Save Dashboard Data</button>
         </form>
     </div>
+
+    <!-- =======================
+    FOOTER (Copied from index.html)
+    ======================== -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <p>Contact: info@agrilink.rw | +250 123 456 789</p>
+            <p>© 2025 AgriLink | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script file (optional but good practice to include) -->
+    <script src="main.js"></script>
+
 </body>
 </html>
