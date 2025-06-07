@@ -42,6 +42,9 @@ a {
 .main-header {
   background-color: var(--light-text);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header-top-bar {
@@ -103,20 +106,37 @@ a {
 }
 
 .btn {
-  padding: 10px 20px;
+  padding: 12px 25px;
   border-radius: 5px;
-  color: var(--light-text);
   font-weight: 500;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  display: inline-block;
 }
 
 .btn-primary {
   background-color: var(--secondary-color);
+  color: var(--light-text);
+  border-color: var(--secondary-color);
 }
 
 .btn-primary:hover {
   background-color: #d96c0d;
+  border-color: #d96c0d;
 }
+
+/* NEW SECONDARY BUTTON STYLE */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+}
+
 
 /* =======================
    IMAGE SLIDER STYLES
@@ -124,8 +144,9 @@ a {
 .image-slider {
   position: relative;
   width: 100%;
-  height: 450px; /* Adjust height as needed */
+  height: 450px;
   overflow: hidden;
+  background-color: #333; /* Fallback color */
 }
 
 .slide {
@@ -145,14 +166,82 @@ a {
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the area without distortion */
+  object-fit: cover;
 }
+
+/* =======================
+   HERO SECTION STYLES (NEW)
+   ======================== */
+.hero {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 50px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* =======================
+   MAIN CONTENT
+   ======================== */
+.main-content {
+  padding: 50px 0;
+}
+
+/* =======================
+   FEATURES SECTION STYLES (NEW)
+   ======================== */
+.features-section {
+  padding: 50px 0;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
 
 /* =======================
    DASHBOARD STYLES
    ======================== */
-.main-content {
-  padding: 50px 0;
+.dashboard-section {
+  padding-top: 20px;
 }
 
 .dashboard-grid {
@@ -165,14 +254,15 @@ a {
   background-color: #fff;
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 25px;
+  padding: 20px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Align items to the top */
+  min-height: 180px; /* Give cards a uniform height */
 }
 
 .dashboard-card:hover {
@@ -181,27 +271,22 @@ a {
 }
 
 .card-icon {
-  font-size: 3rem;
-  margin-bottom: 15px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  height: 45px; /* Give icon a fixed height */
 }
 
 .card-title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--primary-color);
-  margin-bottom: 10px;
-}
-
-.card-data {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--secondary-color);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .card-desc {
   font-size: 0.9rem;
   color: #666;
+  flex-grow: 1; /* Allows description to fill space */
 }
 
 /* =======================
