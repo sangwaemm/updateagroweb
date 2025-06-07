@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles.css"> <!-- We can reuse some styles -->
+    <style>
+        /* Additional styles for the admin page */
+        .admin-container { max-width: 800px; margin: 40px auto; padding: 40px; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .admin-form-group { margin-bottom: 20px; }
+        .admin-form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
+        .admin-form-group input, .admin-form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        .admin-warning { background-color: #fffbe6; border: 1px solid #ffe58f; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <h1 class="section-title">AgriLink Admin Panel</h1>
+
+        <div class="admin-warning">
+            <strong>Note:</strong> This is a visual template. The "Upload" and "Save" buttons require backend development to function.
+        </div>
+
+        <form>
+            <div class="admin-form-group">
+                <h3>Manage Homepage Slider</h3>
+                <label for="slider-image">Upload New Slider Image</label>
+                <input type="file" id="slider-image" name="slider-image">
+            </div>
+            <button type="submit" class="btn btn-primary">Upload Image</button>
+        </form>
+
+        <hr style="margin: 40px 0;">
+
+        <form>
+            <h3>Update Dashboard Data</h3>
+            <div class="admin-form-group">
+                <label for="farmer-count">Farmer Count (e.g., "1,250+ Farmers")</label>
+                <input type="text" id="farmer-count" name="farmer-count" value="1,250+ Farmers">
+            </div>
+             <div class="admin-form-group">
+                <label for="market-listings">Marketplace Listings (e.g., "5,000+ Listings")</label>
+                <input type="text" id="market-listings" name="market-listings" value="5,000+ Listings">
+            </div>
+            <!-- Add more fields for each dashboard card here -->
+            <button type="submit" class="btn btn-primary">Save Dashboard Data</button>
+        </form>
+    </div>
+</body>
+</html>
