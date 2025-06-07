@@ -1,122 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>AgriLink | Admin Panel</title>
-    
-    <!-- Links needed for the header/footer styles (Copied from index.html) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Link to the MAIN stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Additional styles specifically for the admin page content -->
-    <style>
-        .admin-container { 
-            max-width: 800px; 
-            margin: 40px auto; 
-            padding: 40px; 
-            background: #fff; 
-            border-radius: 8px; 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-            min-height: 60vh; /* Ensures content area doesn't look too small */
-        }
-        .admin-form-group { margin-bottom: 20px; }
-        .admin-form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
-        .admin-form-group input, .admin-form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        .admin-warning { background-color: #fffbe6; border: 1px solid #ffe58f; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
-        .admin-container .section-title { font-size: 2rem; margin-bottom: 20px; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AgriLink | Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- =======================
-    HEADER (Copied from index.html)
-    ======================== -->
-    <header class="main-header">
-        <div class="header-top-bar">
-            <div class="container">
-                <span>Welcome to the AgriLink Platform!</span>
-                <div class="top-bar-right">
-                    <a href="#contact">Contact Us</a>
-                    <select class="language-selector">
-                        <option value="en">English</option>
-                        <option value="rw">Kinyarwanda</option>
-                    </select>
-                </div>
-            </div>
+  <header class="main-header">
+    <div class="header-top-bar">
+      <div class="container">
+        <span>Welcome to the AgriLink Platform!</span>
+        <div class="top-bar-right">
+          <a href="#contact">Contact Us</a>
+          <select class="language-selector">
+            <option value="en">English</option>
+            <option value="rw">Kinyarwanda</option>
+          </select>
         </div>
-        <div class="header-main">
-            <div class="container">
-                <div class="logo">
-                    <a href="index.html">🌿 AgriLink</a> <!-- Link back to home -->
-                </div>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#dashboard">Dashboard</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="marketplace.html">Marketplace</a></li>
-                    </ul>
-                </nav>
-                <div class="header-actions">
-                    <a href="login.html" class="btn btn-primary">Login / Register</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- =======================
-    MAIN ADMIN CONTENT
-    ======================== -->
-    <div class="admin-container">
-        <h1 class="section-title">Admin Panel</h1>
-
-        <div class="admin-warning">
-            <strong>Note:</strong> This is a visual template. The "Upload" and "Save" buttons require backend development to function.
-        </div>
-
-        <form action="#" method="POST"> <!-- Added action and method for proper form structure -->
-            <h3>Manage Homepage Slider</h3>
-            <div class="admin-form-group">
-                <label for="slider-image">Upload New Slider Image</label>
-                <input type="file" id="slider-image" name="slider-image" accept="image/*">
-            </div>
-            <button type="submit" class="btn btn-primary">Upload Image</button>
-        </form>
-
-        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
-
-        <form action="#" method="POST">
-            <h3>Update Dashboard Data</h3>
-            <div class="admin-form-group">
-                <label for="farmer-count">Farmer Count (e.g., "1,250+ Farmers")</label>
-                <input type="text" id="farmer-count" name="farmer-count" value="1,250+ Farmers">
-            </div>
-             <div class="admin-form-group">
-                <label for="market-listings">Marketplace Listings (e.g., "5,000+ Listings")</label>
-                <input type="text" id="market-listings" name="market-listings" value="5,000+ Listings">
-            </div>
-            <!-- Add more fields for each dashboard card here -->
-            <button type="submit" class="btn btn-primary">Save Dashboard Data</button>
-        </form>
+      </div>
     </div>
-
-    <!-- =======================
-    FOOTER (Copied from index.html)
-    ======================== -->
-    <footer class="footer" id="contact">
-        <div class="container">
-            <p>Contact: info@agrilink.rw | +250 123 456 789</p>
-            <p>© 2025 AgriLink | All rights reserved.</p>
+    <div class="header-main">
+      <div class="container">
+        <div class="logo">
+          <a href="#">🌿 AgriLink</a>
         </div>
-    </footer>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="login.html" class="btn btn-primary">Login / Register</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <!-- Script file (optional but good practice to include) -->
-    <script src="main.js"></script>
+  <section class="image-slider">
+    <div class="slide active">
+      <img src="https://images.unsplash.com/photo-1597916819332-29c0a5234135?q=80&w=2070&auto=format&fit=crop" alt="Lush green fields">
+    </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=1887&auto=format&fit=crop" alt="Farmer holding produce">
+    </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2070&auto=format&fit=crop" alt="Tractor in a field">
+    </div>
+  </section>
 
+  <!-- =================================
+  NEW HERO SECTION (FROM OLD WEBSITE)
+  ================================== -->
+  <section class="hero">
+    <div class="container">
+      <h1>Empowering Farmers, Dealers & Professionals</h1>
+      <p>One digital platform for agriculture, trade, advice, and jobs in Rwanda</p>
+      <div class="cta-buttons">
+        <a href="farmer-register.html" class="btn btn-primary">🌾 Join as Farmer</a>
+        <a href="animal-marketplace.html" class="btn btn-secondary">🛒 Explore Marketplace</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="main-content">
+    <div class="container">
+
+      <!-- =====================================
+      NEW FEATURES SECTION (RESTYLED)
+      ====================================== -->
+      <section id="features" class="features-section">
+        <h2 class="section-title">🚀 Platform Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">📦 Digital Market for Products & Animals</div>
+          <div class="feature-card">💬 Vet & Agronomist Services</div>
+          <div class="feature-card">🔐 Escrow Protection for Buyers</div>
+          <div class="feature-card">🏪 Agro-Dealer & Supplier Shops</div>
+          <div class="feature-card">🌍 Cross-Border Trade Tools</div>
+          <div class="feature-card">🧾 Farmer Profiling + Analytics</div>
+        </div>
+      </section>
+
+      <!-- =====================================
+      EXPANDED DASHBOARD SECTION (NOW 13 CARDS)
+      ====================================== -->
+      <section id="dashboard" class="dashboard-section">
+        <h2 class="section-title">🧭 Access All Portals</h2>
+        <div class="dashboard-grid">
+          
+          <a href="farmer-portal.html" class="dashboard-card">
+            <div class="card-icon">🌾</div><div class="card-title">Farmer Portal</div><div class="card-desc">Access tools and analytics.</div>
+          </a>
+          <a href="vet-agronomist-portal.html" class="dashboard-card">
+            <div class="card-icon">🏪</div><div class="card-title">Agro-Dealer</div><div class="card-desc">Manage your digital shop.</div>
+          </a>
+          <a href="vet-agronomist-portal.html" class="dashboard-card">
+            <div class="card-icon">👩‍⚕️</div><div class="card-title">Vet/Agronomist</div><div class="card-desc">Offer professional services.</div>
+          </a>
+          <a href="supplier-portal.html" class="dashboard-card">
+            <div class="card-icon">📦</div><div class="card-title">Supplier Dashboard</div><div class="card-desc">Manage bulk inventory.</div>
+          </a>
+          <a href="marketplace.html" class="dashboard-card">
+            <div class="card-icon">🛒</div><div class="card-title">Marketplace</div><div class="card-desc">Buy & sell produce.</div>
+          </a>
+          <a href="animal-marketplace.html" class="dashboard-card">
+            <div class="card-icon">🐄</div><div class="card-title">Animal Market</div><div class="card-desc">Trade livestock securely.</div>
+          </a>
+          <a href="bulk-buyer-zone.html" class="dashboard-card">
+            <div class="card-icon">📊</div><div class="card-title">Bulk Buyer Zone</div><div class="card-desc">Source large quantities.</div>
+          </a>
+          <a href="cross-border-trade.html" class="dashboard-card">
+            <div class="card-icon">🌍</div><div class="card-title">Cross-Border Trade</div><div class="card-desc">Tools for international trade.</div>
+          </a>
+          <a href="fuel-jobs-portal.html" class="dashboard-card">
+            <div class="card-icon">🧑‍🌾</div><div class="card-title">Fuel & Jobs</div><div class="card-desc">Find jobs and resources.</div>
+          </a>
+          <a href="services.html" class="dashboard-card">
+            <div class="card-icon">💬</div><div class="card-title">Advisory Services</div><div class="card-desc">Get expert advice.</div>
+          </a>
+          <a href="professional-shop.html" class="dashboard-card">
+            <div class="card-icon">🧑‍⚕️</div><div class="card-title">Professional Shops</div><div class="card-desc">Shops for certified experts.</div>
+          </a>
+          <a href="other-services.html" class="dashboard-card">
+            <div class="card-icon">🚜</div><div class="card-title">Other Services</div><div class="card-desc">Explore additional resources.</div>
+          </a>
+          <a href="admin.html" class="dashboard-card">
+            <div class="card-icon">🛠️</div><div class="card-title">Admin Dashboard</div><div class="card-desc">Manage the platform.</div>
+          </a>
+
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <h2 class="section-title">💡 About AgriLink</h2>
+        <p>AgriLink connects farmers, dealers, and agri-experts with digital trade tools, advisory services, and a secure ecosystem to help Rwandan agriculture thrive.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <p>Contact: info@agrilink.rw | +250 123 456 789</p>
+      <p>© 2025 AgriLink | All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
