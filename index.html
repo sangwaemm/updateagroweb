@@ -44,30 +44,69 @@
     </div>
   </header>
 
-  <section class="image-slider">
-    <div class="slide active">
-      <img src="https://images.unsplash.com/photo-1597916819332-29c0a5234135?q=80&w=2070&auto=format&fit=crop" alt="Lush green fields">
-    </div>
-    <div class="slide">
-      <img src="https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=1887&auto=format&fit=crop" alt="Farmer holding produce">
-    </div>
-    <div class="slide">
-      <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2070&auto=format&fit=crop" alt="Tractor in a field">
-    </div>
-  </section>
-
   <!-- =================================
-  NEW HERO SECTION (FROM OLD WEBSITE)
+  MODIFIED HERO SECTION
   ================================== -->
-  <section class="hero">
-    <div class="container">
-      <h1>Empowering Farmers, Dealers & Professionals</h1>
-      <p>One digital platform for agriculture, trade, advice, and jobs in Rwanda</p>
-      <div class="cta-buttons">
-        <a href="farmer-register.html" class="btn btn-primary">🌾 Join as Farmer</a>
-        <a href="animal-marketplace.html" class="btn btn-secondary">🛒 Explore Marketplace</a>
-      </div>
+  <section class="hero-container">
+    <!-- News Updates (25%) -->
+    <aside class="news-updates">
+      <h3 class="aside-title">News & Updates</h3>
+      <marquee direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">
+        <ul>
+          <li>Update 1: New government subsidies available for farmers.</li>
+          <li>Update 2: AgriLink launches new cross-border trade feature.</li>
+          <li>Update 3: Weather advisory: Heavy rains expected next week.</li>
+          <li>Update 4: Success story: Farmer triples yield with AgriLink advice.</li>
+          <li>Update 5: Upcoming webinar on modern farming techniques.</li>
+        </ul>
+      </marquee>
+    </aside>
+
+    <!-- Image Slider (50%) -->
+    <div class="image-slider-container">
+      <section class="image-slider">
+        <div class="slide active">
+          <img src="https://images.unsplash.com/photo-1597916819332-29c0a5234135?q=80&w=2070&auto=format&fit=crop" alt="Lush green fields">
+        </div>
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=1887&auto=format&fit=crop" alt="Farmer holding produce">
+        </div>
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2070&auto=format&fit=crop" alt="Tractor in a field">
+        </div>
+      </section>
     </div>
+
+    <!-- Product List (25%) -->
+    <aside class="product-list">
+      <h3 class="aside-title">Products</h3>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="https://via.placeholder.com/80x80.png?text=Maize" alt="Product 1">
+          <span>Maize</span>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/80x80.png?text=Beans" alt="Product 2">
+          <span>Beans</span>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/80x80.png?text=Potatoes" alt="Product 3">
+          <span>Potatoes</span>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/80x80.png?text=Tomatoes" alt="Product 4">
+          <span>Tomatoes</span>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/80x80.png?text=Onions" alt="Product 5">
+          <span>Onions</span>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/80x80.png?text=Carrots" alt="Product 6">
+          <span>Carrots</span>
+        </div>
+      </div>
+    </aside>
   </section>
 
   <main class="main-content">
