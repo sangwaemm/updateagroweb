@@ -34,180 +34,128 @@
         .admin-container .section-title { font-size: 2rem; margin-bottom: 20px; text-align: left; }
 
         /* User Management Table */
-        .user-table-container {
-            overflow-x: auto; /* For responsiveness on small screens */
-        }
-        .user-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        .user-table th, .user-table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        .user-table th {
-            background-color: #f4f7fa;
-            font-weight: 700;
-        }
+        .user-table-container { overflow-x: auto; }
+        .user-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .user-table th, .user-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .user-table th { background-color: #f4f7fa; font-weight: 700; }
         .user-table .status-pending { color: #f58220; font-weight: bold; }
         .user-table .status-approved { color: #28a745; font-weight: bold; }
         
-        /* Action Buttons */
-        .action-btn {
-            padding: 6px 12px;
-            border: none;
-            border-radius: 4px;
-            color: white;
-            cursor: pointer;
-            font-size: 0.9rem;
-            margin-right: 5px;
-        }
+        /* Action Buttons & Item Lists */
+        .action-btn { padding: 6px 12px; border: none; border-radius: 4px; color: white; cursor: pointer; font-size: 0.9rem; margin-right: 5px; }
         .btn-approve { background-color: #28a745; }
         .btn-reject { background-color: #dc3545; }
         .btn-delete { background-color: #6c757d; }
+        .current-items-list li { display: flex; justify-content: space-between; align-items: center; padding: 8px; border-bottom: 1px solid #eee; }
+        .current-items-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 15px; margin-top: 15px; }
+        .current-item { border: 1px solid #ddd; padding: 10px; border-radius: 4px; text-align: center; }
+        .current-item img { max-width: 60px; height: auto; margin-bottom: 5px; }
+        .current-item .btn-delete { width: 100%; margin-top: 5px; }
 
         /* Clickable Title */
-        .clickable-title {
-            cursor: pointer;
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-        .clickable-title:hover {
-            color: var(--secondary-color);
-        }
-
-        /* Hidden class for JS */
-        .hidden {
-            display: none;
-        }
+        .clickable-title { cursor: pointer; color: var(--primary-color); display: inline-block; padding-bottom: 5px; }
+        .clickable-title:hover { color: var(--secondary-color); }
+        .hidden { display: none; }
     </style>
 </head>
 <body>
 
-    <!-- =======================
-    HEADER (Copied from index.html)
-    ======================== -->
+    <!-- HEADER -->
     <header class="main-header">
         <div class="header-main">
           <div class="container">
-            <div class="logo">
-              <a href="index.html">🌿 AgriLink</a>
-            </div>
-            <nav class="main-nav">
-              <ul>
-                <li><a href="index.html">View Homepage</a></li>
-              </ul>
-            </nav>
-            <div class="header-actions">
-              <a href="#" class="btn btn-primary">Logout</a>
-            </div>
+            <div class="logo"><a href="index.html">🌿 AgriLink</a></div>
+            <nav class="main-nav"><ul><li><a href="index.html">View Homepage</a></li></ul></nav>
+            <div class="header-actions"><a href="#" class="btn btn-primary">Logout</a></div>
           </div>
         </div>
     </header>
 
-    <!-- =======================
-    MAIN ADMIN CONTENT
-    ======================== -->
+    <!-- MAIN ADMIN CONTENT -->
     <div class="admin-container">
         <h1 class="section-title">Admin Dashboard</h1>
 
         <div class="admin-warning">
-            <strong>Note:</strong> This is a front-end prototype. The forms require a backend (server-side code and a database) to save, upload, and delete data. The buttons are for demonstration only.
+            <strong>Note:</strong> This is a front-end prototype. All forms require a backend to function.
         </div>
 
         <!-- User Management Section -->
         <section class="admin-section">
             <h3 id="user-management-title" class="clickable-title">Manage User Registrations ▼</h3>
             <div id="user-table-wrapper" class="user-table-container hidden">
-                <!-- This table would be populated with data from your backend -->
                 <table class="user-table">
-                    <thead>
-                        <tr>
-                            <th>User ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Role</th>
-                            <th>Status</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th>User ID</th><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Actions</th></tr></thead>
                     <tbody>
-                        <!-- Example of a pending user -->
-                        <tr>
-                            <td>USR-003</td>
-                            <td>Jane Doe</td>
-                            <td>jane.d@example.com</td>
-                            <td>Farmer</td>
-                            <td class="status-pending">Pending</td>
-                            <td>
-                                <!-- Backend would process "approve" action -->
-                                <button class="action-btn btn-approve">Approve</button>
-                                <!-- Backend would process "reject" action -->
-                                <button class="action-btn btn-reject">Reject</button>
-                            </td>
-                        </tr>
-                        <!-- Example of an approved user -->
-                        <tr>
-                            <td>USR-001</td>
-                            <td>John Smith</td>
-                            <td>john.s@example.com</td>
-                            <td>Agro-Dealer</td>
-                            <td class="status-approved">Approved</td>
-                            <td>
-                                <!-- Backend would process "delete" action -->
-                                <button class="action-btn btn-delete">Delete User</button>
-                            </td>
-                        </tr>
+                        <tr><td>USR-003</td><td>Jane Doe</td><td>jane.d@example.com</td><td>Farmer</td><td class="status-pending">Pending</td><td><button class="action-btn btn-approve">Approve</button><button class="action-btn btn-reject">Reject</button></td></tr>
+                        <tr><td>USR-001</td><td>John Smith</td><td>john.s@example.com</td><td>Agro-Dealer</td><td class="status-approved">Approved</td><td><button class="action-btn btn-delete">Delete</button></td></tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
-        <!-- Homepage Slider Management -->
+        <!-- Homepage Content Management -->
         <section class="admin-section">
-            <h3>Manage Homepage Slider</h3>
-            <form action="#" method="POST"> <!-- Backend would handle file upload -->
+            <h3>Manage Homepage Content</h3>
+            
+            <!-- Slider Management -->
+            <div class="admin-form-group">
+                <label for="slider-image">Upload New Slider Image</label>
+                <input type="file" id="slider-image" name="slider-image" accept="image/*">
+                <button type="submit" class="btn btn-primary" style="margin-top:10px;">Upload Image</button>
+            </div>
+            <hr>
+
+            <!-- News & Updates Management -->
+            <label>Manage News & Updates</label>
+            <form action="#" method="POST" style="margin-top:10px;">
                 <div class="admin-form-group">
-                    <label for="slider-image">Upload New Slider Image</label>
-                    <input type="file" id="slider-image" name="slider-image" accept="image/*">
+                    <textarea name="news-update" rows="2" placeholder="Enter new update text..."></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Upload Image</button>
+                <button type="submit" class="btn btn-primary">Add Update</button>
             </form>
-             <hr style="margin: 20px 0;">
-            <h4>Current Slider Images:</h4>
-            <!-- This part would be dynamically generated by the backend -->
-            <p>image1.jpg <button class="action-btn btn-delete">Delete</button></p>
+            <div class="current-items-list">
+                <ul>
+                    <!-- Example item, would be generated by backend -->
+                    <li><span>New government subsidies available for farmers.</span> <button class="action-btn btn-delete">Delete</button></li>
+                </ul>
+            </div>
+            <hr>
+
+            <!-- Products Management -->
+            <label>Manage Homepage Products (Max 6)</label>
+            <form action="#" method="POST" style="margin-top:10px;">
+                <div class="admin-form-group">
+                    <input type="text" name="product-name" placeholder="Product Name">
+                </div>
+                <div class="admin-form-group">
+                    <label>Product Image</label>
+                    <input type="file" name="product-image" accept="image/*">
+                </div>
+                <button type="submit" class="btn btn-primary">Add Product</button>
+            </form>
+            <div class="current-items-grid">
+                <!-- Example item, would be generated by backend -->
+                <div class="current-item">
+                    <img src="https://via.placeholder.com/80x80.png?text=Maize" alt="Maize">
+                    <span>Maize</span>
+                    <button class="action-btn btn-delete">Delete</button>
+                </div>
+            </div>
         </section>
 
         <!-- Admin Profile Management -->
         <section class="admin-section">
             <h3>Manage Your Profile</h3>
-            <form action="#" method="POST"> <!-- Backend would handle profile update -->
-                <div class="admin-form-group">
-                    <label for="admin-name">Your Name</label>
-                    <input type="text" id="admin-name" name="admin-name" value="Admin User">
-                </div>
-                <div class="admin-form-group">
-                    <label for="admin-email">Your Email</label>
-                    <input type="email" id="admin-email" name="admin-email" value="admin@agrilink.rw">
-                </div>
-                 <div class="admin-form-group">
-                    <label for="admin-password">New Password</label>
-                    <input type="password" id="admin-password" name="admin-password" placeholder="Leave blank to keep current password">
-                </div>
+            <form action="#" method="POST">
+                <div class="admin-form-group"><label for="admin-name">Your Name</label><input type="text" id="admin-name" value="Admin User"></div>
+                <div class="admin-form-group"><label for="admin-email">Your Email</label><input type="email" id="admin-email" value="admin@agrilink.rw"></div>
+                <div class="admin-form-group"><label for="admin-password">New Password</label><input type="password" id="admin-password" placeholder="Leave blank to keep current password"></div>
                 <button type="submit" class="btn btn-primary">Update Profile</button>
             </form>
         </section>
-
     </div>
 
-    <!-- =======================
-    FOOTER (Copied from index.html)
-    ======================== -->
+    <!-- FOOTER -->
     <footer class="footer" id="contact">
         <div class="container">
             <p>Contact: info@agrilink.rw | +250 123 456 789</p>
@@ -215,19 +163,17 @@
         </div>
     </footer>
 
-    <!-- =======================
-    EMBEDDED JAVASCRIPT
-    ======================== -->
+    <!-- JAVASCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const userManagementTitle = document.getElementById('user-management-title');
             const userTableWrapper = document.getElementById('user-table-wrapper');
 
-            // Check if the elements exist before adding an event listener
             if (userManagementTitle && userTableWrapper) {
                 userManagementTitle.addEventListener('click', function() {
-                    // Toggle the 'hidden' class on the table wrapper
                     userTableWrapper.classList.toggle('hidden');
+                    // Change arrow direction
+                    this.textContent = userTableWrapper.classList.contains('hidden') ? 'Manage User Registrations ▼' : 'Manage User Registrations ▲';
                 });
             }
         });
