@@ -43,6 +43,10 @@ def get_news():
     news_list = [dict(row) for row in news]
     return jsonify(news_list)
 
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
 # --- This is the part that starts the server ---
 # The 'if' statement is standard Python practice for runnable scripts.
 if __name__ == '__main__':
