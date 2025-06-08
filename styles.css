@@ -125,7 +125,6 @@ a {
   border-color: #d96c0d;
 }
 
-/* NEW SECONDARY BUTTON STYLE */
 .btn-secondary {
   background-color: transparent;
   color: var(--primary-color);
@@ -137,16 +136,87 @@ a {
   color: var(--light-text);
 }
 
+/* =================================
+   NEW HERO/SLIDER CONTAINER STYLES
+   ================================= */
+.hero-container {
+  display: flex;
+  height: 450px; /* Define a fixed height for the container */
+  background-color: #fff;
+  border-bottom: 1px solid var(--border-color);
+}
 
-/* =======================
-   IMAGE SLIDER STYLES
-   ======================== */
+/* News & Products Asides (Left & Right Columns) */
+.news-updates, .product-list {
+  flex: 0 0 25%; /* Do not grow, do not shrink, basis of 25% */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Hide anything that overflows */
+  background-color: #fdfdfd;
+  border-right: 1px solid var(--border-color);
+}
+
+.product-list {
+  border-right: none;
+  border-left: 1px solid var(--border-color);
+}
+
+.aside-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+/* News Updates Specific Styles */
+.news-updates marquee {
+  height: calc(100% - 50px); /* Calculate height minus title */
+}
+.news-updates ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.news-updates li {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Product List Specific Styles */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns fit nicely */
+  gap: 15px;
+}
+.product-item {
+  text-align: center;
+}
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 5px;
+}
+.product-item span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Image Slider Container (Middle Column) */
+.image-slider-container {
+  flex: 0 0 50%; /* Do not grow, do not shrink, basis of 50% */
+  position: relative;
+}
+
 .image-slider {
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 100%; /* Take full height of its container */
   overflow: hidden;
-  background-color: #333; /* Fallback color */
 }
 
 .slide {
@@ -170,35 +240,6 @@ a {
 }
 
 /* =======================
-   HERO SECTION STYLES (NEW)
-   ======================== */
-.hero {
-  background-color: #ffffff;
-  text-align: center;
-  padding: 50px 20px;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.hero h1 {
-  font-size: 2.8rem;
-  color: var(--primary-color);
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto 30px auto;
-}
-
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* =======================
    MAIN CONTENT
    ======================== */
 .main-content {
@@ -206,7 +247,7 @@ a {
 }
 
 /* =======================
-   FEATURES SECTION STYLES (NEW)
+   FEATURES SECTION STYLES
    ======================== */
 .features-section {
   padding: 50px 0;
@@ -236,7 +277,6 @@ a {
   box-shadow: 0 6px 12px rgba(0,0,0,0.08);
 }
 
-
 /* =======================
    DASHBOARD STYLES
    ======================== */
@@ -261,8 +301,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Align items to the top */
-  min-height: 180px; /* Give cards a uniform height */
+  justify-content: flex-start;
+  min-height: 180px;
 }
 
 .dashboard-card:hover {
@@ -273,7 +313,7 @@ a {
 .card-icon {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  height: 45px; /* Give icon a fixed height */
+  height: 45px;
 }
 
 .card-title {
@@ -286,7 +326,7 @@ a {
 .card-desc {
   font-size: 0.9rem;
   color: #666;
-  flex-grow: 1; /* Allows description to fill space */
+  flex-grow: 1;
 }
 
 /* =======================
