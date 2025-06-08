@@ -78,6 +78,31 @@
         <div class="admin-warning">
             <strong>Note:</strong> This is a front-end prototype. All forms require a backend to function.
         </div>
+        <form action="#" method="POST"> <!-- Added action and method for proper form structure -->
+        <h3>Manage Homepage Slider</h3>
+        <div class="admin-form-group">
+            <label for="slider-image">Upload New Slider Image</label>
+            <input type="file" id="slider-image" name="slider-image" accept="image/*">
+        </div>
+        <button type="submit" class="btn btn-primary">Upload Image</button>
+    </form>
+
+    <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
+
+    <form action="#" method="POST">
+        <h3>Update Dashboard Data</h3>
+        <div class="admin-form-group">
+            <label for="farmer-count">Farmer Count (e.g., "1,250+ Farmers")</label>
+            <input type="text" id="farmer-count" name="farmer-count" value="1,250+ Farmers">
+        </div>
+         <div class="admin-form-group">
+            <label for="market-listings">Marketplace Listings (e.g., "5,000+ Listings")</label>
+            <input type="text" id="market-listings" name="market-listings" value="5,000+ Listings">
+        </div>
+        <!-- Add more fields for each dashboard card here -->
+        <button type="submit" class="btn btn-primary">Save Dashboard Data</button>
+    </form>
+</div>
 
         <!-- User Management Section -->
         <section class="admin-section">
