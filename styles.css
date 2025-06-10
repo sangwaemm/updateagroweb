@@ -680,3 +680,52 @@ h1, h2, h3, h4 {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 }
+/* ==========================================================================
+   16. CUSTOMIZED SUB-PAGE HEADER STYLES
+   - This section restyles the header for all pages with <body class="sub-page">
+   - It gives them a green background consistent with the footer.
+   ========================================================================== */
+
+/* Apply these styles only to pages with <body class="sub-page"> */
+.sub-page .main-header {
+  /* Change the main header background to the primary green color */
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for depth */
+}
+
+/* Make the top bar blend in with a slightly darker green */
+.sub-page .header-top-bar {
+  background-color: #256f29; /* A slightly darker, richer green */
+  border-bottom: 1px solid #388e3c; /* A subtle border */
+}
+
+/* Change all text in the top bar to white for readability */
+.sub-page .header-top-bar,
+.sub-page .header-top-bar a {
+  color: rgba(255, 255, 255, 0.9); /* Slightly off-white for softness */
+}
+
+/* Change the logo and main navigation link colors to white */
+.sub-page .logo a,
+.sub-page .main-nav a {
+  color: var(--light-text);
+}
+
+/* Adjust hover color for nav links to stand out on the green background */
+.sub-page .main-nav a:hover {
+  color: var(--secondary-color); /* Use the vibrant yellow/orange for hover */
+  text-decoration: none;
+}
+
+/* Ensure the language selector is visible and styled correctly */
+.sub-page .language-selector {
+  background-color: #388e3c;
+  color: var(--light-text);
+  border-color: #558b2f;
+}
+
+/* The primary login/register button already contrasts well, but we ensure
+   its hover state is consistent if needed. No changes needed by default. */
+.sub-page .btn-primary {
+  /* No change needed, the yellow on green is a great combination */
+}
