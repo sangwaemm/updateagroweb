@@ -681,51 +681,49 @@ h1, h2, h3, h4 {
   }
 }
 /* ==========================================================================
-   16. CUSTOMIZED SUB-PAGE HEADER STYLES
+   16. CUSTOMIZED SUB-PAGE HEADER STYLES (Corrected)
    - This section restyles the header for all pages with <body class="sub-page">
-   - It gives them a green background consistent with the footer.
+   - It gives them a green background and ensures menu text is black.
    ========================================================================== */
 
 /* Apply these styles only to pages with <body class="sub-page"> */
 .sub-page .main-header {
-  /* Change the main header background to the primary green color */
   background-color: var(--primary-color);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for depth */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Make the top bar blend in with a slightly darker green */
 .sub-page .header-top-bar {
-  background-color: #256f29; /* A slightly darker, richer green */
-  border-bottom: 1px solid #388e3c; /* A subtle border */
+  background-color: #256f29;
+  border-bottom: 1px solid #388e3c;
 }
 
-/* Change all text in the top bar to white for readability */
 .sub-page .header-top-bar,
 .sub-page .header-top-bar a {
-  color: rgba(255, 255, 255, 0.9); /* Slightly off-white for softness */
+  color: rgba(255, 255, 255, 0.9);
 }
 
-/* Change the logo and main navigation link colors to white */
-.sub-page .logo a,
-.sub-page .main-nav a {
+/* --- CORRECTION IS HERE --- */
+
+/* Keep the logo text white for contrast */
+.sub-page .logo a {
   color: var(--light-text);
 }
 
-/* Adjust hover color for nav links to stand out on the green background */
-.sub-page .main-nav a:hover {
-  color: var(--secondary-color); /* Use the vibrant yellow/orange for hover */
-  text-decoration: none;
+/* Change ONLY the main navigation link text to black for visibility */
+.sub-page .main-nav a {
+  color: var(--dark-text); /* --dark-text is #333, a soft black */
+  font-weight: 500; /* Making it slightly bolder to stand out */
 }
 
-/* Ensure the language selector is visible and styled correctly */
+/* Adjust hover color for nav links to stand out (hover to yellow/orange) */
+.sub-page .main-nav a:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+/* --- END OF CORRECTION --- */
+
 .sub-page .language-selector {
   background-color: #388e3c;
   color: var(--light-text);
   border-color: #558b2f;
-}
-
-/* The primary login/register button already contrasts well, but we ensure
-   its hover state is consistent if needed. No changes needed by default. */
-.sub-page .btn-primary {
-  /* No change needed, the yellow on green is a great combination */
 }
