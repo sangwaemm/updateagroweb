@@ -114,11 +114,33 @@
     </div>
   </header>
 
-  <main>
-      <div class="container">
-          <h1 style="text-align:center; margin-top:2rem;">Agro-Dealer Dashboard</h1>
-          <p style="text-align:center;">If you can see a white header with a gray top bar above, the HTML and CSS code is working.</p>
-      </div>
+ <main class="main-content">
+    <div class="container">
+        <div class="page-header">
+            <h1>📦 Product Catalog</h1>
+        </div>
+        <div class="content-card">
+            <button class="btn btn-primary" onclick="alert('Add Product')">+ Add New Product</button>
+            <div class="market-grid" style="margin-top: 2rem;">
+              <div class="market-card">
+                <div class="market-card-content">
+                    <h3>Maize Seed A</h3>
+                    <p>Stock: 120kg</p>
+                    <p class="price">1500 RWF/kg</p>
+                    <button class="btn">Edit</button>
+                </div>
+              </div>
+              <div class="market-card">
+                <div class="market-card-content">
+                    <h3>Fertilizer X</h3>
+                    <p>Stock: 200 bags</p>
+                    <p class="price">9500 RWF/bag</p>
+                    <button class="btn">Edit</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
   </main>
 
   <footer class="footer">
