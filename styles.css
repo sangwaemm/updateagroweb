@@ -680,3 +680,54 @@ h1, h2, h3, h4 {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 }
+17. SPECIAL HEADER OVERRIDE FOR DASHBOARDS
+   - This forces the header on pages like the Farmer Dashboard to look
+     like the main index page header (white/gray), ignoring the green
+     sub-page style.
+   ========================================================================== */
+
+/* Apply these styles ONLY to a .sub-page that uses the full header structure */
+.sub-page .main-header {
+  background-color: var(--light-text); /* Revert to WHITE background */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Style the top bar to be light gray, like the index page */
+.sub-page .header-top-bar {
+  background-color: #f1f1f1;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Revert top bar text color to dark gray */
+.sub-page .header-top-bar,
+.sub-page .header-top-bar a {
+  color: #555;
+}
+
+/* Revert logo color to the primary green */
+.sub-page .logo a {
+  color: var(--primary-color);
+}
+
+/* Revert main navigation links to black */
+.sub-page .main-nav a {
+  color: var(--dark-text);
+}
+
+/* Ensure the hover color is the secondary orange/yellow */
+.sub-page .main-nav a:hover {
+  color: var(--secondary-color);
+}
+
+/* Style the logout button to be an outline button */
+.sub-page .header-actions .btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.sub-page .header-actions .btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  text-decoration: none;
+}
