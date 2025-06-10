@@ -6,7 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
 </head>
-<header class="main-header">
+
+<!-- The <body> tag was missing. All content goes inside it. -->
+<body class="sub-page">
+
+  <!-- HEADER IS NOW CORRECTLY PLACED INSIDE THE BODY -->
+  <header class="main-header">
     <div class="header-top-bar">
       <div class="container">
         <span>Welcome, Agro-Dealer!</span>
@@ -38,23 +43,43 @@
     </div>
   </header>
 
-  <main class="dashboard">
-    <h2>📦 Product Catalog</h2>
-    <button onclick="alert('Add Product')">+ Add New Product</button>
-    <div class="product-grid">
-      <div class="product">
-        <h3>Maize Seed A</h3>
-        <p>Stock: 120kg</p>
-        <p>Price: 1500 RWF/kg</p>
-        <p><button>Edit</button></p>
-      </div>
-      <div class="product">
-        <h3>Fertilizer X</h3>
-        <p>Stock: 200 bags</p>
-        <p>Price: 9500 RWF/bag</p>
-        <p><button>Edit</button></p>
-      </div>
+  <!-- MAIN CONTENT IS ALSO INSIDE THE BODY -->
+  <main class="main-content">
+    <div class="container">
+        <div class="page-header">
+            <h1>📦 Product Catalog</h1>
+        </div>
+        <div class="content-card">
+            <button class="btn btn-primary" onclick="alert('Add Product')">+ Add New Product</button>
+            <div class="market-grid" style="margin-top: 2rem;">
+              <div class="market-card">
+                <div class="market-card-content">
+                    <h3>Maize Seed A</h3>
+                    <p>Stock: 120kg</p>
+                    <p class="price">1500 RWF/kg</p>
+                    <button class="btn">Edit</button>
+                </div>
+              </div>
+              <div class="market-card">
+                <div class="market-card-content">
+                    <h3>Fertilizer X</h3>
+                    <p>Stock: 200 bags</p>
+                    <p class="price">9500 RWF/bag</p>
+                    <button class="btn">Edit</button>
+                </div>
+              </div>
+            </div>
+        </div>
     </div>
   </main>
+
+  <!-- ADDING A FOOTER FOR CONSISTENCY -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <p>Contact: info@agrilink.rw | +250 123 456 789</p>
+      <p>© 2025 AgriLink | All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
