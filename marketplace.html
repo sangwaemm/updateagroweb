@@ -8,16 +8,36 @@
 </head>
 <body>
   <header class="main-header">
-    <div class="logo">🛒 AgriLink Marketplace</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#filters">Filter</a></li>
-        <li><a href="#products">Listings</a></li>
-        <li><a href="escrow-payment.html">Escrow</a></li>
-        <li><a href="#">Logout</a></li>
-      </ul>
-    </nav>
+    <div class="header-top-bar">
+      <div class="container">
+        <span>Welcome to the Marketplace!</span>
+        <div class="top-bar-right">
+          <a href="#contact">Contact Support</a>
+          <select class="language-selector">
+            <option value="en">English</option>
+            <option value="rw">Kinyarwanda</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">🌿 AgriLink</a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#filters">Filter</a></li>
+            <li><a href="#products">Listings</a></li>
+            <li><a href="escrow-payment.html">Escrow</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="index.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </div>
+    </div>
   </header>
 
   <section id="filters" class="filter-bar">
@@ -62,8 +82,11 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <p>© 2025 AgriLink. Trade Securely. Grow Strong.</p>
+  <footer class="footer" id="contact">
+    <div class="container">
+      <p>Contact: info@agrilink.rw | +250 123 456 789</p>
+      <p>© 2025 AgriLink | All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
