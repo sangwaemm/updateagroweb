@@ -7,52 +7,45 @@
   <link rel="stylesheet" href="styles.css">
   
   <header class="main-header">
-    <div class="header-top-bar">
-      <div class="container">
-        <span>Welcome to the AgriLink Platform!</span>
-        <div class="top-bar-right">
-          <a href="#contact">Contact Us</a>
-          <select class="language-selector">
-            <option value="en">English</option>
-            <option value="rw">Kinyarwanda</option>
-          </select>
-        </div>
+  <!-- TOP BAR: Welcome message and contact -->
+  <div class="header-top-bar">
+    <div class="container">
+      <span>Welcome, Farmer!</span>
+      <div class="top-bar-right">
+        <a href="#contact">Contact Support</a>
+        <select class="language-selector">
+          <option value="en">English</option>
+          <option value="rw">Kinyarwanda</option>
+        </select>
       </div>
     </div>
-    <div class="header-main">
-      <div class="container">
-        <div class="logo">
-          <a href="#">🌿 AgriLink</a>
-        </div>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#dashboard">Dashboard</a></li>
-            <li><a href="#about">About</a></li>
-          </ul>
-        </nav>
-        <div class="header-actions">
-          <a href="login.html" class="btn btn-primary">Login / Register</a>
-        </div>
-      </div>
-    </div>
-  </header>
+  </div>
 
-</head>
-<body class="sub-page">
-  <header class="main-header">
-    <div class="logo">🌾 Farmer Dashboard</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#profile">My Farm</a></li>
-        <li><a href="#history">Sales</a></li>
-        <li><a href="#support">Loans</a></li>
-        <li><a href="#services">Advisory</a></li>
-        <li><a href="index.html">Logout</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- MAIN HEADER: Logo, Navigation, and Logout -->
+  <div class="header-main">
+    <div class="container">
+      <!-- Main Logo linking back to home -->
+      <div class="logo">
+        <a href="index.html">🌿 AgriLink</a>
+      </div>
+
+      <!-- Dashboard-specific navigation -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#profile">My Farm</a></li>
+          <li><a href="#history">Sales</a></li>
+          <li><a href="#support">Loans</a></li>
+          <li><a href="#services">Advisory</a></li>
+        </ul>
+      </nav>
+
+      <!-- Logout Button -->
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-secondary">Logout</a>
+      </div>
+    </div>
+  </div>
+</header>
 
   <main class="admin-grid">
     <section id="profile" class="card">
