@@ -1,44 +1,150 @@
-/* =======================
-   GLOBAL STYLES & VARIABLES
-   ======================== */
+/* ==========================================================================
+   AgriLink Platform - Main Stylesheet
+   ==========================================================================
+   TABLE OF CONTENTS
+   -----------------
+   1.  Global & Base Styles (Variables, Reset, Typography)
+   2.  General Layout & Components (Container, Buttons, Cards)
+   3.  Header & Footer Styles
+   4.  Index Page: Hero, Features, Dashboard Grid
+   5.  Login & Registration Forms
+   6.  Admin Portal Styles
+   7.  Farmer Portal Styles
+   8.  Marketplace & Animal Market Styles
+   9.  Professional Portals (Agro-Dealer, Vet, Supplier)
+   10. Bulk Buyer Zone Styles
+   11. Cross-Border Trade Styles
+   12. Fuel & Jobs Portal Styles
+   13. Advisory & Other Services Styles
+   14. Professional Shop Styles
+   15. Media Queries (Responsiveness)
+   ========================================================================== */
+
+/* =====================================
+   1. GLOBAL & BASE STYLES
+   ===================================== */
 :root {
-  --primary-color: #005a9e; /* A professional blue */
-  --secondary-color: #f58220; /* An energetic orange */
-  --light-gray: #f4f7fa;
-  --dark-text: #333;
-  --light-text: #fff;
-  --border-color: #ddd;
+  --primary-color: #2e7d32;   /* Deep Green */
+  --secondary-color: #f9a825; /* Vibrant Orange/Yellow */
+  --light-bg: #f7fdf7;       /* Very Light Green */
+  --light-text: #ffffff;
+  --dark-text: #333333;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
 }
 
 body {
-  margin: 0;
-  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--light-gray);
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  background-color: var(--light-bg);
   color: var(--dark-text);
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+main {
+  flex: 1 0 auto; /* Allow main content to grow and shrink */
 }
 
 a {
-  text-decoration: none;
   color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* =====================================
+   2. GENERAL LAYOUT & COMPONENTS
+   ===================================== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
-  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
   margin-bottom: 40px;
+  color: var(--primary-color);
 }
 
-/* =======================
-   HEADER STYLES
-   ======================== */
+.btn {
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+  border-color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+  background-color: #d96c0d;
+  border-color: #d96c0d;
+  text-decoration: none;
+}
+
+.page-header {
+  background: var(--primary-color);
+  color: var(--light-text);
+  padding: 2rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  color: var(--light-text);
+  font-size: 2.5rem;
+}
+
+/* Generic Card for portal content */
+.content-card {
+  background: var(--light-text);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  margin-bottom: 1.5rem;
+}
+
+/* =====================================
+   3. HEADER & FOOTER STYLES
+   ===================================== */
 .main-header {
   background-color: var(--light-text);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -87,9 +193,6 @@ a {
 }
 
 .main-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   display: flex;
   gap: 30px;
 }
@@ -103,55 +206,31 @@ a {
 
 .main-nav a:hover {
   color: var(--secondary-color);
+  text-decoration: none;
 }
 
-.btn {
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-  display: inline-block;
+.footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: auto; /* Stick to bottom */
 }
 
-.btn-primary {
-  background-color: var(--secondary-color);
-  color: var(--light-text);
-  border-color: var(--secondary-color);
-}
-
-.btn-primary:hover {
-  background-color: #d96c0d;
-  border-color: #d96c0d;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: var(--primary-color);
-  border-color: var(--primary-color);
-}
-
-.btn-secondary:hover {
-  background-color: var(--primary-color);
-  color: var(--light-text);
-}
-
-/* =================================
-   NEW HERO/SLIDER CONTAINER STYLES
-   ================================= */
+/* =====================================
+   4. INDEX PAGE: HERO, FEATURES, DASHBOARD
+   ===================================== */
 .hero-container {
   display: flex;
-  height: 450px; /* Define a fixed height for the container */
+  height: 450px;
   background-color: #fff;
   border-bottom: 1px solid var(--border-color);
 }
 
-/* News & Products Asides (Left & Right Columns) */
 .news-updates, .product-list {
-  flex: 0 0 25%; /* Do not grow, do not shrink, basis of 25% */
+  flex: 0 0 25%;
   padding: 20px;
-  box-sizing: border-box;
-  overflow: hidden; /* Hide anything that overflows */
+  overflow: hidden;
   background-color: #fdfdfd;
   border-right: 1px solid var(--border-color);
 }
@@ -170,96 +249,54 @@ a {
   border-bottom: 2px solid var(--secondary-color);
 }
 
-/* News Updates Specific Styles */
 .news-updates marquee {
-  height: calc(100% - 50px); /* Calculate height minus title */
-}
-.news-updates ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  height: calc(100% - 50px);
 }
 .news-updates li {
   margin-bottom: 20px;
   font-size: 0.95rem;
-  line-height: 1.4;
 }
 
-/* Product List Specific Styles */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns fit nicely */
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 }
 .product-item {
   text-align: center;
 }
 .product-item img {
-  max-width: 100%;
-  height: auto;
   border-radius: 5px;
   border: 1px solid var(--border-color);
   margin-bottom: 5px;
 }
-.product-item span {
-  font-size: 0.9rem;
-  font-weight: 500;
-}
 
-/* Image Slider Container (Middle Column) */
 .image-slider-container {
-  flex: 0 0 50%; /* Do not grow, do not shrink, basis of 50% */
+  flex: 0 0 50%;
   position: relative;
 }
-
 .image-slider {
   position: relative;
   width: 100%;
-  height: 100%; /* Take full height of its container */
+  height: 100%;
   overflow: hidden;
 }
-
 .slide {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
+.slide.active { opacity: 1; }
+.slide img { width: 100%; height: 100%; object-fit: cover; }
 
-.slide.active {
-  opacity: 1;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* =======================
-   MAIN CONTENT
-   ======================== */
-.main-content {
-  padding: 50px 0;
-}
-
-/* =======================
-   FEATURES SECTION STYLES
-   ======================== */
-.features-section {
-  padding: 50px 0;
-  margin-bottom: 40px;
-}
-
+.features-section { padding: 50px 0; margin-bottom: 40px; }
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
-
 .feature-card {
   background-color: #fff;
   padding: 25px;
@@ -271,25 +308,17 @@ a {
   box-shadow: 0 2px 4px rgba(0,0,0,0.04);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .feature-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.08);
 }
 
-/* =======================
-   DASHBOARD STYLES
-   ======================== */
-.dashboard-section {
-  padding-top: 20px;
-}
-
+.dashboard-section { padding-top: 20px; }
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
-
 .dashboard-card {
   background-color: #fff;
   border: 1px solid var(--border-color);
@@ -304,46 +333,350 @@ a {
   justify-content: flex-start;
   min-height: 180px;
 }
-
 .dashboard-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  text-decoration: none;
 }
+.card-icon { font-size: 2.5rem; margin-bottom: 10px; height: 45px; }
+.card-title { font-size: 1.2rem; font-weight: 700; color: var(--primary-color); margin-bottom: 8px; }
+.card-desc { font-size: 0.9rem; color: #666; flex-grow: 1; }
 
-.card-icon {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  height: 45px;
+/* =====================================
+   5. LOGIN & REGISTRATION FORMS
+   ===================================== */
+.form-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px var(--shadow-color);
 }
-
-.card-title {
-  font-size: 1.2rem;
-  font-weight: 700;
+.form-container h2 {
+  text-align: center;
   color: var(--primary-color);
-  margin-bottom: 8px;
+  margin-bottom: 1.5rem;
+}
+.form-container label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+.form-container input, .form-container select, .form-container textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.form-container button {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+}
+.form-container .form-footer {
+  text-align: center;
+  margin-top: 1rem;
 }
 
-.card-desc {
-  font-size: 0.9rem;
-  color: #666;
-  flex-grow: 1;
+/* =====================================
+   6. ADMIN PORTAL STYLES
+   ===================================== */
+.admin-grid {
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.admin-card {
+  background: var(--light-text);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+.admin-card h2 {
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+.admin-card ul {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+}
+.admin-card li {
+  background: #f1f8e9;
+  padding: 0.6rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #8bc34a;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.admin-card button {
+  background: #c62828; /* Red for delete/remove actions */
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-/* =======================
-   ABOUT & FOOTER
-   ======================== */
-.about-section {
-  margin-top: 60px;
-  padding: 40px;
-  background-color: #fff;
+/* =====================================
+   7. FARMER PORTAL STYLES
+   ===================================== */
+.farmer-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.stat-card {
+  background-color: #e8f5e9; /* Light green */
+  padding: 1.5rem;
   border-radius: 8px;
   text-align: center;
+  border-left: 5px solid var(--primary-color);
+}
+.stat-card .stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.data-table th, .data-table td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+.data-table th {
+  background-color: var(--primary-color);
+  color: var(--light-text);
 }
 
-.footer {
-  background-color: #333;
-  color: var(--light-text);
+/* =====================================
+   8. MARKETPLACE & ANIMAL MARKET STYLES
+   ===================================== */
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.market-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px var(--shadow-color);
+  transition: transform 0.2s ease;
+}
+.market-card:hover {
+  transform: translateY(-5px);
+}
+.market-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.market-card-content {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.market-card-content h3 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+.market-card-content p {
+  margin: 0.4rem 0;
+  color: #555;
+}
+.market-card-content .price {
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+.market-card .btn {
+  margin-top: auto; /* Pushes button to the bottom */
+  width: 100%;
   text-align: center;
-  padding: 20px 0;
-  margin-top: 50px;
+}
+
+/* =====================================
+   9. PROFESSIONAL PORTALS (Agro-Dealer, Vet, Supplier)
+   ===================================== */
+.professional-dashboard .content-card h3 {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+.order-list li, .product-management li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+.order-list li:last-child, .product-management li:last-child {
+  border-bottom: none;
+}
+
+/* =====================================
+   10. BULK BUYER ZONE STYLES
+   ===================================== */
+.bulk-section {
+  background: #f1f8e9;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+.bulk-listing {
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: var(--light-text);
+}
+.bulk-listing h4 {
+  margin-bottom: 0.5rem;
+}
+
+/* =====================================
+   11. CROSS-BORDER TRADE STYLES
+   ===================================== */
+.border-status {
+  padding: 1rem 1.5rem;
+  background: #e3f2fd;
+  border-left: 6px solid #1e88e5; /* Blue */
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+.document-list a {
+  display: block;
+  padding: 0.8rem;
+  background: #f5f5f5;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.document-list a:hover {
+  background: #e0e0e0;
+  text-decoration: none;
+}
+
+/* =====================================
+   12. FUEL & JOBS PORTAL STYLES
+   ===================================== */
+.jobs-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr; /* Single column layout */
+}
+.job-card {
+  padding: 1.5rem;
+  border: 1px solid #dcedc8;
+  background: #f9fbe7;
+  border-left: 6px solid #7cb342;
+  border-radius: 8px;
+}
+.job-card h4 {
+  color: #558b2f;
+  margin-bottom: 0.5rem;
+}
+
+/* =====================================
+   13. ADVISORY & OTHER SERVICES STYLES
+   ===================================== */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.service-card {
+  background: var(--light-text);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.service-card .service-icon {
+  font-size: 3rem;
+  color: var(--secondary-color);
+}
+
+/* =====================================
+   14. PROFESSIONAL SHOP STYLES
+   ===================================== */
+.shop-banner {
+  text-align: center;
+  background: linear-gradient(to right, var(--primary-color), #558b2f);
+  padding: 3rem 1rem;
+  color: var(--light-text);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+.shop-banner h2 {
+  color: var(--light-text);
+}
+.shop-products-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.shop-product-card {
+  background: #f0f4c3;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #c5e1a5;
+  text-align: center;
+}
+.shop-product-card h3 {
+  color: #33691e;
+}
+
+/* =====================================
+   15. MEDIA QUERIES (RESPONSIVENESS)
+   ===================================== */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .news-updates, .product-list, .image-slider-container {
+    flex: 1 1 100%;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .image-slider-container {
+    height: 350px;
+  }
+  .header-main .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .dashboard-grid, .features-grid, .market-grid, .admin-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
 }
