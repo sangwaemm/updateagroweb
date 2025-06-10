@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Animal Marketplace | AgriLink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">🐄 Animal Market</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#listings">Livestock</a></li>
+        <li><a href="#filter">Filter</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="filter" class="filter-bar">
+    <h2>🔍 Filter Animals</h2>
+    <form>
+      <select>
+        <option>All Types</option>
+        <option>Cattle</option>
+        <option>Goats</option>
+        <option>Poultry</option>
+      </select>
+      <input type="text" placeholder="e.g. Location or Breed">
+      <button>Apply</button>
+    </form>
+  </section>
+
+  <section id="listings" class="product-grid">
+    <div class="product">
+      <h3>Friesian Dairy Cow</h3>
+      <p>Age: 3 yrs | Milk: 18L/day</p>
+      <p>Price: 320,000 RWF</p>
+      <a href="product-detail.html" class="btn-primary">View Details</a>
+    </div>
+    <div class="product">
+      <h3>Boer Goat</h3>
+      <p>Age: 1.5 yrs | Weight: 50kg</p>
+      <p>Price: 90,000 RWF</p>
+      <a href="product-detail.html" class="btn-primary">View Details</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 AgriLink Animal Marketplace</p>
+  </footer>
+</body>
+</html>

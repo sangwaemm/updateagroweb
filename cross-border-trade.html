@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cross-Border Trade | AgriLink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">🌍 Cross-Border Trade</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#exports">Export Products</a></li>
+        <li><a href="#upload">Docs</a></li>
+        <li><a href="#logistics">Logistics</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="admin-grid">
+    <section id="exports" class="admin-card">
+      <h2>📦 Certified Export Listings</h2>
+      <div class="product-grid">
+        <div class="product">
+          <h3>Cleaned Red Sorghum</h3>
+          <p>Qty: 3 tons</p>
+          <p>Port: Gatuna</p>
+          <button>Contact Buyer</button>
+        </div>
+        <div class="product">
+          <h3>Fertilized Chicken Eggs</h3>
+          <p>Qty: 500 trays</p>
+          <p>Port: Rusumo</p>
+          <button>View Docs</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="upload" class="admin-card">
+      <h2>📑 Upload Export Documents</h2>
+      <form>
+        <label>Product Certificate (e.g., RICA, NAEB):</label>
+        <input type="file" accept=".pdf,.jpg,.png" required>
+
+        <label>Border Point:</label>
+        <select required>
+          <option value="">-- Select Port --</option>
+          <option>Gatuna</option>
+          <option>Rusumo</option>
+          <option>Kagitumba</option>
+        </select>
+
+        <label>Custom Notes / Export Terms:</label>
+        <textarea></textarea>
+
+        <button type="submit">Submit Document</button>
+      </form>
+    </section>
+
+    <section id="logistics" class="admin-card">
+      <h2>🚛 Schedule Logistics / Inspections</h2>
+      <form>
+        <label>Date of Border Dispatch:</label>
+        <input type="date" required>
+
+        <label>Type of Vehicle:</label>
+        <select>
+          <option>Truck</option>
+          <option>Mini-pickup</option>
+        </select>
+
+        <label>Reserve Export Officer for Inspection?</label>
+        <select>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+
+        <button type="submit">Schedule Now</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 AgriLink Cross-Border Platform | Connecting Rwanda to the Region</p>
+  </footer>
+</body>
+</html>

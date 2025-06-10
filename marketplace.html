@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marketplace | AgriLink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">🛒 AgriLink Marketplace</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#filters">Filter</a></li>
+        <li><a href="#products">Listings</a></li>
+        <li><a href="escrow-payment.html">Escrow</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="filters" class="filter-bar">
+    <h2>🔍 Filter Listings</h2>
+    <form>
+      <select>
+        <option value="">All Categories</option>
+        <option value="animal">🐄 Animals</option>
+        <option value="seeds">🌱 Seeds</option>
+        <option value="fertilizer">🌾 Fertilizer</option>
+        <option value="medicine">💊 Vet Supplies</option>
+        <option value="product">📦 Value-Added Products</option>
+      </select>
+      <input type="text" placeholder="Enter location e.g. Kigali">
+      <button type="submit">Apply</button>
+    </form>
+  </section>
+
+  <section id="products" class="product-grid">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/150" alt="Cow">
+      <h3>Brown Cow - Dairy</h3>
+      <p>Price: 300,000 RWF</p>
+      <p>Location: Musanze</p>
+      <a href="product-detail.html" class="btn-primary">View & Reserve</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/150" alt="Seeds">
+      <h3>Hybrid Maize Seeds</h3>
+      <p>Price: 1,200 RWF/kg</p>
+      <p>Location: Nyamagabe</p>
+      <a href="product-detail.html" class="btn-primary">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/150" alt="Supplements">
+      <h3>Vitamin Feed (Goats)</h3>
+      <p>Price: 15,000 RWF</p>
+      <p>Location: Kigali</p>
+      <a href="product-detail.html" class="btn-primary">Contact Seller</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 AgriLink. Trade Securely. Grow Strong.</p>
+  </footer>
+</body>
+</html>

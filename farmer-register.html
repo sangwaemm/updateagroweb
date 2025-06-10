@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Farmer Registration | AgriLink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="form-container">
+    <form class="register-form">
+      <h2>🌾 Farmer Registration</h2>
+
+      <label>Full Name:</label>
+      <input type="text" required>
+
+      <label>Phone Number:</label>
+      <input type="tel" required>
+
+      <label>National ID:</label>
+      <input type="text" required>
+
+      <label>📷 Upload Photo:</label>
+      <input type="file" accept="image/*" required>
+
+      <h3>🌍 Farm Details</h3>
+      <label>Land Description:</label>
+      <textarea placeholder="Size, type, irrigation..." required></textarea>
+
+      <label>Soil Type:</label>
+      <input type="text" required>
+
+      <label>Equipment Owned:</label>
+      <input type="text" />
+
+      <h3>🌾 Crops & Calendar</h3>
+      <textarea placeholder="Crop types, planting/harvest times" required></textarea>
+
+      <h3>📈 Market Activity</h3>
+      <input type="text" placeholder="Markets accessed" required>
+      <input type="text" placeholder="Selling prices" required>
+
+      <h3>💸 Payment Preference</h3>
+      <select required>
+        <option value="">Select Payment Method</option>
+        <option>MTN MoMo</option>
+        <option>Bank Transfer</option>
+      </select>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

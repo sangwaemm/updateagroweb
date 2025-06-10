@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fuel & Jobs Portal | AgriLink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">⛽ Fuel & Jobs</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#stations">Fuel Stations</a></li>
+        <li><a href="#jobs">Agri Jobs</a></li>
+        <li><a href="#apply">Apply</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="admin-grid">
+    <section id="stations" class="admin-card">
+      <h2>⛽ Available Fuel Stations</h2>
+      <div class="product-grid">
+        <div class="product">
+          <h3>PetroRwanda – Kigali</h3>
+          <p>Fuel: Diesel | Delivery: Yes</p>
+          <button>Request Quote</button>
+        </div>
+        <div class="product">
+          <h3>AgriFuel Depot – Nyagatare</h3>
+          <p>Fuel: Petrol & Lubes | Delivery: No</p>
+          <button>Contact</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="jobs" class="admin-card">
+      <h2>🧑‍🌾 Agri Jobs Board</h2>
+      <ul>
+        <li>🌾 Farmhand (Seasonal) – Rwf 80,000/mo – Nyamasheke <button>Apply</button></li>
+        <li>🚜 Tractor Driver – Rwf 150,000/mo – Gicumbi <button>Apply</button></li>
+        <li>👩‍🔬 Soil Testing Assistant – Rwf 120,000 – Kigali <button>Apply</button></li>
+      </ul>
+    </section>
+
+    <section id="apply" class="admin-card">
+      <h2>📄 Apply for a Job</h2>
+      <form>
+        <label>Full Name:</label>
+        <input type="text" required>
+
+        <label>Phone:</label>
+        <input type="tel" required>
+
+        <label>Location:</label>
+        <input type="text" required>
+
+        <label>Upload CV/Recommendation:</label>
+        <input type="file" accept=".pdf,.doc,.jpg" required>
+
+        <label>Job of Interest:</label>
+        <input type="text" placeholder="e.g., Tractor Driver" required>
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 AgriLink Jobs & Fuel Portal</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Supplier Portal | AgriLink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">📦 Supplier Dashboard</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#catalog">My Products</a></li>
+        <li><a href="#orders">Orders</a></li>
+        <li><a href="#messages">Messages</a></li>
+        <li><a href="#reports">Reports</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="admin-grid">
+    <section id="catalog" class="admin-card">
+      <h2>📦 Product Catalog</h2>
+      <button onclick="alert('Upload Form Coming Soon')">+ Add New Product</button>
+      <div class="product-grid">
+        <div class="product">
+          <h3>Hybrid Maize Seed</h3>
+          <p>SKU: MAZ-DR-01</p>
+          <p>Stock: 120kg | Price: 1500 RWF/kg</p>
+          <button>Edit</button>
+        </div>
+        <div class="product">
+          <h3>Organic Fertilizer B</h3>
+          <p>SKU: FERT-ORG-002</p>
+          <p>Stock: 80 bags | Price: 9200 RWF</p>
+          <button>Edit</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="orders" class="admin-card">
+      <h2>📋 Orders</h2>
+      <ul>
+        <li>Order #1023 – 30kg Maize – Status: <strong>Pending</strong> <button>Update</button></li>
+        <li>Order #1020 – 5 bags Fertilizer – Status: <strong>Shipped</strong> <button>Details</button></li>
+      </ul>
+    </section>
+
+    <section id="messages" class="admin-card">
+      <h2>📨 Agro-Dealer Messages</h2>
+      <ul>
+        <li>New Inquiry: "Do you have drought maize in stock?" <button>Reply</button></li>
+        <li>Follow-up: "Shipment confirmed" <button>Open</button></li>
+      </ul>
+    </section>
+
+    <section id="reports" class="admin-card">
+      <h2>📊 Sales & Payments</h2>
+      <ul>
+        <li>Products Sold: 320kg</li>
+        <li>Revenue: 1.85M RWF</li>
+        <li>Payouts: Weekly to MoMo</li>
+      </ul>
+      <button>View Full Report</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 AgriLink Supplier Interface</p>
+  </footer>
+</body>
+</html>

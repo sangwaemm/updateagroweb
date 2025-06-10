@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agri Services Booking | AgriLink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">💬 Advisory Services</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#advisors">Advisors</a></li>
+        <li><a href="#book">Book</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="admin-grid">
+    <section id="advisors" class="admin-card">
+      <h2>🧑‍⚕️ Available Advisors</h2>
+      <div class="product-grid">
+        <div class="product">
+          <h3>Dr. Alice M.</h3>
+          <p>Specialist: Vet (Dairy, Poultry)</p>
+          <p>Rating: ⭐⭐⭐⭐☆</p>
+          <button>Book Now</button>
+        </div>
+        <div class="product">
+          <h3>Mr. Jean-Claude R.</h3>
+          <p>Specialist: Agronomist (Soil & Fertility)</p>
+          <p>Rating: ⭐⭐⭐⭐⭐</p>
+          <button>Book Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="book" class="admin-card">
+      <h2>📅 Book a Session</h2>
+      <form>
+        <label>Select Advisor:</label>
+        <select required>
+          <option value="">-- Choose --</option>
+          <option>Dr. Alice M.</option>
+          <option>Jean-Claude R.</option>
+        </select>
+
+        <label>Choose Date:</label>
+        <input type="date" required>
+
+        <label>Preferred Time:</label>
+        <select>
+          <option>09:00 AM</option>
+          <option>11:00 AM</option>
+          <option>02:00 PM</option>
+        </select>
+
+        <label>Topic:</label>
+        <textarea placeholder="e.g., Animal vaccination consultation" required></textarea>
+
+        <button type="submit">Confirm Booking</button>
+      </form>
+    </section>
+
+    <section id="feedback" class="admin-card">
+      <h2>⭐ Rate Your Session</h2>
+      <form>
+        <label>Advisor Name:</label>
+        <input type="text" required>
+
+        <label>Rating (1-5):</label>
+        <select required>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="1">⭐</option>
+        </select>
+
+        <label>Comment:</label>
+        <textarea></textarea>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 AgriLink Advisory Services</p>
+  </footer>
+</body>
+</html>
