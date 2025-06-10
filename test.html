@@ -1,61 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Header Test</title>
-    <style>
-        /* This is all the CSS needed */
-        body {
-            font-family: sans-serif;
-            margin: 0;
-        }
-        .main-header {
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .header-top-bar {
-            background-color: #f1f1f1;
-            padding: 8px 20px;
-            color: #555;
-            font-size: 0.9rem;
-        }
-        .header-main {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #2e7d32; /* Green color */
-        }
-        .main-nav a {
-            margin-left: 20px;
-            color: black;
-            font-size: 1.1rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Agro-Dealer Portal (TEST)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- We are NOT linking to styles.css. All styles are below. -->
+  <style>
+    /* =====================================
+       1. GLOBAL & BASE STYLES
+       ===================================== */
+    :root {
+      --primary-color: #2e7d32;
+      --secondary-color: #f9a825;
+      --light-bg: #f7fdf7;
+      --light-text: #ffffff;
+      --dark-text: #333333;
+      --border-color: #e0e0e0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Roboto', 'Segoe UI', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--dark-text);
+      line-height: 1.6;
+    }
+    a { color: var(--primary-color); text-decoration: none; }
+    ul { list-style: none; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+    /* =====================================
+       2. HEADER & FOOTER STYLES
+       ===================================== */
+    .main-header {
+      background-color: var(--light-text);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .header-top-bar {
+      background-color: #f1f1f1;
+      padding: 8px 0;
+      font-size: 0.9rem;
+      color: #555;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .header-top-bar .container, .header-main .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-main .container { padding: 15px 20px; }
+    .logo a { font-size: 1.8rem; font-weight: 700; color: var(--primary-color); }
+    .main-nav ul { display: flex; gap: 30px; }
+    .main-nav a { font-size: 1.1rem; font-weight: 500; color: var(--dark-text); }
+    .main-nav a:hover { color: var(--secondary-color); }
+    .btn {
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: 500;
+      border: 2px solid transparent;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+    .btn-secondary:hover {
+      background-color: var(--primary-color);
+      color: var(--light-text);
+    }
+    .footer {
+      background: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
+
+<!-- The body tag no longer needs class="sub-page" for this test -->
 <body>
 
-    <header class="main-header">
-        <div class="header-top-bar">
-            <span>Welcome Message Area</span>
+  <header class="main-header">
+    <div class="header-top-bar">
+      <div class="container">
+        <span>Welcome, Agro-Dealer!</span>
+        <div class="top-bar-right">
+          <a href="#contact">Contact Support</a>
+          <select class="language-selector">
+            <option value="en">English</option>
+            <option value="rw">Kinyarwanda</option>
+          </select>
         </div>
-        <div class="header-main">
-            <div class="logo">
-                🌿 AgriLink
-            </div>
-            <nav class="main-nav">
-                <a href="#">Catalog</a>
-                <a href="#">Messages</a>
-                <a href="#">Orders</a>
-            </nav>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">🌿 AgriLink</a>
         </div>
-    </header>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#">Catalog</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Orders</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="index.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <h1 style="text-align: center; margin-top: 50px;">Test Page</h1>
-    <p style="text-align: center;">Look at the header above. Is it white with a gray bar on top?</p>
+  <main>
+      <div class="container">
+          <h1 style="text-align:center; margin-top:2rem;">Agro-Dealer Dashboard</h1>
+          <p style="text-align:center;">If you can see a white header with a gray top bar above, the HTML and CSS code is working.</p>
+      </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Contact: info@agrilink.rw | +250 123 456 789</p>
+      <p>© 2025 AgriLink | All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
