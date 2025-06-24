@@ -48,38 +48,104 @@
   </div>
 </header>
 
-  <main class="admin-grid">
-    <section id="profile" class="card">
-      <h2>🌱 Farm Overview</h2>
-      <ul>
-        <li>Land: 3 Hectares – Soil: Loam – Irrigated</li>
-        <li>Animals: 4 Cows, 12 Goats</li>
-        <li>Crops: Maize, Beans (2024)</li>
-      </ul>
-      <button>Edit Profile</button>
-    </section>
+  <main class="marketplace-grid">
+    <!-- TOP HEADER FOR FILTERS AND ACTIONS -->
+    <header class="marketplace-header card">
+        <div class="filter-options">
+            <input type="search" placeholder="Search products...">
+            <select name="categories">
+                <option value="">All Categories</option>
+                <option value="grains">Grains</option>
+                <option value="vegetables">Vegetables</option>
+                <option value="fruits">Fruits</option>
+                <option value="livestock">Livestock</option>
+            </select>
+            <select name="insurance">
+                <option value="">Insurance Companies</option>
+                <option value="radiant">Radiant</option>
+                <option value="sanlam">Sanlam</option>
+            </select>
+        </div>
+        <div class="sell-button-container">
+            <button id="open-sell-modal-btn" class="sell-btn">Sell Product</button>
+        </div>
+    </header>
 
-    <section id="history" class="card">
-      <h2>📈 Sales History</h2>
-      <ul>
-        <li>Jan 2024 – 180kg Beans to AgroMax – 135,000 RWF</li>
-        <li>Dec 2023 – 2 Dairy Cows to KivuBuyer – 600,000 RWF</li>
-      </ul>
-      <button>Export Report</button>
-    </section>
+    <!-- PRODUCT DISPLAY GRID -->
+    <section id="product-market" class="product-grid">
+        <!-- Example Product 1 -->
+        <article class="product-card" onclick="location.href='product-detail.html';">
+            <img src="https://via.placeholder.com/300x200.png?text=Maize+Harvest" alt="Maize">
+            <div class="product-info">
+                <h2>Fresh Maize</h2>
+                <p class="quantity">Available: 500 kg</p>
+                <p class="price">1,200 RWF / kg</p>
+                <p class="description">High-quality maize, harvested this season. Perfect for flour or animal feed.</p>
+                <div class="contact-container">
+                    <button class="contact-seller-btn">Contact Seller</button>
+                    <div class="contact-options">
+                        <button class="chat-btn">Chat</button>
+                        <button class="call-btn">Call</button>
+                    </div>
+                </div>
+            </div>
+        </article>
 
-    <section id="support" class="card">
-      <h2>💸 Loans & Inputs</h2>
-      <p>Status: Pre-qualified for 400,000 RWF input loan</p>
-      <button>Apply Now</button>
+        <!-- Example Product 2 -->
+        <article class="product-card" onclick="location.href='product-detail.html';">
+            <img src="https://via.placeholder.com/300x200.png?text=Irish+Potatoes" alt="Potatoes">
+            <div class="product-info">
+                <h2>Irish Potatoes</h2>
+                <p class="quantity">Available: 2 Tons</p>
+                <p class="price">800 RWF / kg</p>
+                <p class="description">Grade A potatoes from the Northern Province. Ideal for restaurants and export.</p>
+                <div class="contact-container">
+                    <button class="contact-seller-btn">Contact Seller</button>
+                    <div class="contact-options">
+                        <button class="chat-btn">Chat</button>
+                        <button class="call-btn">Call</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <!-- More products would be added here dynamically -->
     </section>
+</main>
 
-    <section id="services" class="card">
-      <h2>📅 Advisory Sessions</h2>
-      <p>Next: 12 June @ 10:00 AM with Agronomist Jean-Claude</p>
-      <button>Manage Bookings</button>
-    </section>
-  </main>
+<!-- SELL PRODUCT MODAL (POP-UP FORM) -->
+<div id="sell-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">×</span>
+        <h2>List Your Product for Sale</h2>
+        <form id="sell-product-form">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" name="product-name" required>
+
+            <label for="product-quantity">Quantity Available (e.g., 500 kg):</label>
+            <input type="text" id="product-quantity" name="product-quantity" required>
+
+            <label for="product-price">Price (e.g., 1200 RWF / kg):</label>
+            <input type="text" id="product-price" name="product-price" required>
+
+            <label for="product-description">Short Description:</label>
+            <textarea id="product-description" name="product-description" rows="3" required></textarea>
+            
+            <label for="product-details">Full Details (Conditions, Restrictions, etc.):</label>
+            <textarea id="product-details" name="product-details" rows="6"></textarea>
+
+            <label for="product-images">Upload Images:</label>
+            <input type="file" id="product-images" name="product-images" multiple>
+
+            <label for="product-location">Location (District/Sector):</label>
+            <input type="text" id="product-location" name="product-location">
+
+            <button type="submit" class="sell-btn">List My Product</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
 
   <footer class="footer">
     <p>© 2025 AgriLink Farmer Platform</p>
